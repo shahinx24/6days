@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grade System</title>
+</head>
+<body>
+    <div>
+        <h1>Grade Calculate</h1>
+        <input type="number" id="mark" placeholder="Enter your marks">
+        <button onclick="getGrade()">Check Grade</button>
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+        function getGrade() {
+            const marks = parseFloat(document.getElementById("mark").value);
+            const result = document.getElementById("result");
+
+            if (isNaN(marks)) {
+                result.innerHTML = "Please enter valid marks";
+                return;
+            }
+
+            if (marks < 0 || marks > 100) {
+                result.innerHTML = "Marks should be between 0 and 100";
+                return;
+            }
+
+        let grade = "";
+
+        if (marks >= 90) grade = "A+";
+        else if (marks >= 80) grade = "A";
+        else if (marks >= 70) grade = "B+";
+        else if (marks >= 60) grade = "B";
+        else if (marks >= 50) grade = "C+";
+        else if (marks >= 40) grade = "C";
+        else if (marks >= 35) grade = "D+";
+        else if (marks >= 30) grade = "D";
+        else grade = "F";
+
+        result.innerHTML = "Grade: " + grade;
+        }
+    </script>
+
+</body>
+</html>
