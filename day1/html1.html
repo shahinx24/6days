@@ -22,11 +22,11 @@
     </div>
     <script>
         let count = 0;
+        const res = document.getElementById('result');
 
         function calculate(op) {
             const input = document.getElementById('num1');
             const value = parseFloat(input.value);
-            const res = document.getElementById('result');
 
             if (isNaN(value)) {
                 res.innerHTML = "Enter a Number";
@@ -56,10 +56,10 @@
             }
             res.innerHTML = count;
             input.value = "";
-            function resetCount() {
-                document.getElementById('num1').value = "";
-                res.innerHTML = 0;
-            }
+        }
+        function resetCount() {
+            document.getElementById('num1').value = "";
+            res.innerHTML = 0;
         }
     </script>
 </body>

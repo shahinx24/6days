@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Checker</title>
+</head>
+
+<body>
+    <div>
+        <h3>Enter Your Age</h3>
+        <input id="num1" type="number" placeholder="Enter Your Age" />
+        <button type="button" onclick="Check()">Check</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function Check() {
+            const input = document.getElementById('num1');
+            const value = parseFloat(input.value);
+            const res = document.getElementById('result');
+
+            if (isNaN(value)) {
+                res.innerHTML = "Enter a valid age";
+            } else if (value < 0) {
+                res.innerHTML = "Age cannot be negative"
+            } else if (value < 18) {
+                res.innerHTML = "You are not eligible"
+            } else {
+                res.innerHTML = " You are eligible"
+            }
+        }
+    </script>
+</body>
+
+</html>
