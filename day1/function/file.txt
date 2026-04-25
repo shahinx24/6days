@@ -1,0 +1,106 @@
+🎮 Level 1: Basic Function
+🧩 Task 1
+
+Create a function that takes a number and returns its square.
+
+👉 Example:
+
+square(4) → 16
+
+💡 Hint: use return num * num
+
+🧩 Task 2
+
+Create a function that checks if a number is even or odd.
+
+👉 Example:
+
+check(5) → "Odd"
+check(6) → "Even"
+
+💡 Hint: % 2
+
+🎮 Level 2: Input + Logic
+🧩 Task 3
+
+Create a function that returns the largest of two numbers
+
+👉 Example:
+
+max(10, 20) → 20
+
+💡 Hint: use if
+
+🧩 Task 4
+
+Create a function that returns the sum of all numbers in an array
+
+👉 Example:
+
+sum([1,2,3,4]) → 10
+
+💡 Hint: loop
+
+🎮 Level 3: Real Thinking
+🧩 Task 5
+
+Create a function that counts vowels in a string
+
+👉 Example:
+
+countVowels("hello") → 2
+
+💡 Hint: check a,e,i,o,u
+
+🧩 Task 6
+
+Create a function that reverses a string
+
+👉 Example:
+
+reverse("hello") → "olleh"
+
+💡 Hint: loop or .split().reverse().join()
+
+🎮 Level 4: Interview Level
+🧩 Task 7
+
+Create a function that removes duplicates from an array
+
+👉 Example:
+
+unique([1,2,2,3,4,4]) → [1,2,3,4]
+
+💡 Hint: Set
+
+🧩 Task 8
+
+Create a function that checks if a string is a palindrome
+
+👉 Example:
+
+isPalindrome("madam") → true
+
+💡 Hint: reverse and compare
+
+🎮 Boss Level 🔥
+🧩 Task 9
+
+Create a function that returns factorial of a number
+
+👉 Example:
+
+fact(5) → 120
+
+💡 Hint:
+
+5! = 5 × 4 × 3 × 2 × 1
+🧩 Task 10
+
+Create a function that finds the second largest number in an array
+
+👉 Example:
+
+secondLargest([10, 5, 8, 20]) → 10
+
+💡 Hint: sort or track manually
