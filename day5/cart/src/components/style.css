@@ -1,0 +1,13 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: aquamarine;
+}
+.card{
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: rgb(127, 153, 255);
+}
