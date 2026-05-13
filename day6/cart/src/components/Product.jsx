@@ -19,19 +19,22 @@ const Product = () => {
     ];
 
     return (
-        <div className="grid">
-            {products.map((product) => (
-                <div key={product.id} className="card">
-                    <p><b>{product.name}</b></p>
-                    <p>Price: Rs. {product.price}</p>
-                    <button onClick={() => dispatch(addToCart(product))}>
-                        Add to Cart
-                    </button>
-                </div>
-            ))
+        <>
+            <h2>Products</h2>
+            <div className="grid">
+                {products.map((product) => (
+                    <div key={product.id} className="card">
+                        <p><b>{product.name}</b></p>
+                        <p>Price: Rs. {product.price}</p>
+                        <button onClick={() => dispatch(addToCart(product))}>
+                            Add to Cart
+                        </button>
+                    </div>
+                ))
 
-            }
-        </div>
+                }
+            </div>
+        </>
     )
 }
 

@@ -1,6 +1,6 @@
 .grid{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 16px;
     background-color: rgb(64, 4, 41);
     padding: 40px;
@@ -8,7 +8,7 @@
 
 .cart-grid{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 16px;
     background-color: rgb(4, 35, 64);
     padding: 40px;

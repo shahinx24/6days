@@ -1,20 +1,27 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromCart } from "../redux/cartSlice";
 
 const Cart = () => {
+    const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cart.cartItems);
 
     return (
-        <div  className="cart-grid">
+        <>
             <h2>Cart</h2>
-            {cartItems.length === 0 && <p>Your cart is empty.</p>}
-            {cartItems.map((item) => (
-                <div key={item.id} className="card">
-                    <p>Name: {item.name}</p>
-                    <p>Price: {item.price}</p>
-                    <p>Quantity: {item.quantity}</p>
-                </div>
-            ))}
-        </div>
+            <div className="cart-grid">
+                {cartItems.length === 0 && <p>Your cart is empty.</p>}
+                {cartItems.map((item) => (
+                    <div key={item.id} className="card">
+                        <p>Name: {item.name}</p>
+                        <p>Price: {item.price}</p>
+                        <p>Quantity: {item.quantity}</p>
+                        <button onClick={() => dispatch(removeFromCart(item.id))}>
+                            Delete
+                        </button>
+                    </div>
+                ))}
+            </div>
+        </>
     )
 }
 export default Cart;
