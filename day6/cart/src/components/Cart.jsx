@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart } from "../redux/cartSlice";
+import { remove } from "../redux/cartSlice";
 
 const Cart = () => {
     const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const Cart = () => {
                         <p>Name: {item.name}</p>
                         <p>Price: {item.price}</p>
                         <p>Quantity: {item.quantity}</p>
-                        <button onClick={() => dispatch(removeFromCart(item.id))}>
+                        <button onClick={() => dispatch(remove(item.id))}>
                             Delete
                         </button>
                     </div>

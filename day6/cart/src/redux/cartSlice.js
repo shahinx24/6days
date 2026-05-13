@@ -22,12 +22,12 @@ const cartSlice = createSlice({
                 });
             }
         },
-        removeFromCart: (state, action) => {
+        remove: (state, action) => {
             state.cartItems = state.cartItems.filter(
                 (item) => item.id !== action.payload
             );
         }
     }
 })
-export const { addToCart, removeFromCart } = cartSlice.actions;
+export const { addToCart, remove } = cartSlice.actions;
 export default cartSlice.reducer;
