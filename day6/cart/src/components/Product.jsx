@@ -1,21 +1,36 @@
 import { addToCart } from "../redux/cartSlice"
 import { useDispatch } from "react-redux";
+import "./style.css"
 
-const Product = ()=>{
-    const  dispatch = useDispatch();
+const Product = () => {
+    const dispatch = useDispatch();
 
-    const product = {
-        id: 1,
-        name: "shoe",
-        price: 1000
-    };
+    const products = [
+        {
+            id: 1,
+            name: "Shoe",
+            price: 1000
+        },
+        {
+            id: 2,
+            name: "Watch",
+            price: 500
+        }
+    ];
 
-    return(
-        <div>
-            <h2>{product.name}</h2>
-            <button onClick={()=> dispatch(addToCart(product))}>
-                Add to Cart
-            </button>
+    return (
+        <div className="grid">
+            {products.map((product) => (
+                <div key={product.id} className="card">
+                    <p><b>{product.name}</b></p>
+                    <p>Price: Rs. {product.price}</p>
+                    <button onClick={() => dispatch(addToCart(product))}>
+                        Add to Cart
+                    </button>
+                </div>
+            ))
+
+            }
         </div>
     )
 }

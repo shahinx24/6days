@@ -4,12 +4,14 @@ const Cart = () => {
     const cartItems = useSelector((state) => state.cart.cartItems);
 
     return (
-        <div>
+        <div  className="cart-grid">
             <h2>Cart</h2>
-            {cartItems.map((item,index) => (
-                <div key={index}>
+            {cartItems.length === 0 && <p>Your cart is empty.</p>}
+            {cartItems.map((item) => (
+                <div key={item.id} className="card">
                     <p>Name: {item.name}</p>
                     <p>Price: {item.price}</p>
+                    <p>Quantity: {item.quantity}</p>
                 </div>
             ))}
         </div>

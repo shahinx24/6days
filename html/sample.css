@@ -1,0 +1,31 @@
+button {
+  background: rgb(62, 191, 255);
+  transition: 0.5s;
+  padding: 8px;
+  border-radius: 8px;
+  border: rgb(255, 255, 197) solid 2px;
+}
+
+button:hover {
+  background: rgb(251, 132, 132);
+}
+
+form{
+    padding: 89px;
+    align-items: center;
+    align-content: center;
+    color: white;
+    flex-grow: 2;
+}
+
+img {
+  float: right;
+  filter: grayscale(100%);
+  /* filter: blur(2px); */
+  width: 280px;
+  height: 150px;
+}
+
+body{
+    background-image:url("image.png");
+}
